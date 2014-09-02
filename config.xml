@@ -42,7 +42,8 @@
     <icon src="res/icons/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
 
     <access origin="*" subdomains="true" />
-    <preference name="Fullscreen" value="true" />
-    <preference name="Orientation" value="portrait" />
+
 
 </widget>
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
