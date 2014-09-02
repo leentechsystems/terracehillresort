@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: url("../img/building_map.png") no-repeat scroll 50% 100% / contain rgba(0, 0, 0, 0);
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
+    overflow: hidden;
+    text-align: center;
+}
+.cloud_container {
+    position: relative;
+}
+.cloud_container img {
+    /*    left: 0;*/
+    max-width: 100%;
+    position: absolute;
+}
+
+.cloud_container img.logo {
+    max-width: 600px;
+    position: relative;
+    top: 20px;
+    width: 90%;
+    z-index: 2;
+}
+.footer {
+    bottom: 0;
+    color: #787878;
+    font-family: Arial, sans-serif;
+    font-size: 17pt;
+    font-weight: lighter;
+    position: absolute;
+    width: 100%;
+}
