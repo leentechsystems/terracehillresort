@@ -28,10 +28,10 @@ body, html {
 }
 
 .cloud_container img.logo {
-    max-width: 600px;
+    max-width: 50%;
     position: relative;
     top: 20px;
-    width: 90%;
+    width: 100%;
     z-index: 2;
 }
 .footer {
