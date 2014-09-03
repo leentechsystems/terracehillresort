@@ -45,4 +45,16 @@
     <preference name="Fullscreen" value="true" />
     <preference name="orientation" value="portrait" />
 
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    </feature>
+
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+
+    <feature name="InAppBrowser" />
+
+
+
 </widget>
