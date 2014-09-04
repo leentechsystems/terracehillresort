@@ -33,14 +33,11 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        networkState = navigator.network.connection.type;
-        if (networkState == Connection.NONE){
-          alert('no internet ');
-        }
-        else {
-          alert('internet ');
-        }
-        // window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
+        document.addEventListener("offline", onOffline, false);
+        window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
+    },
+    onOffline: function() {
+        alert('No Internet Connection');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
