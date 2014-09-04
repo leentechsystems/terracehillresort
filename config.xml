@@ -44,12 +44,14 @@
     <access origin="*" subdomains="true" />
     <preference name="Fullscreen" value="true" />
     <preference name="orientation" value="portrait" />
+    <preference name="phonegap-version" value="3.5.0" />
+
+
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
 
     <feature name="NetworkStatus">
-        <param name="ios-package" value="CDVConnection" />
+        <param name="android-package" value="org.apache.cordova.NetworkManager" />
     </feature>
-
-
-
-
 </widget>
