@@ -27,8 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener("offline", onOffline, false);
-
+        document.addEventListener("offline", this.onOffline, false);
     },
     // deviceready Event Handler
     //
@@ -36,6 +35,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
+    },
+    onOffline: function() {
+        alert('No Internet Connection');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,8 +51,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-
-function onOffline() {
-    alert('No Internet Connection');
-}
