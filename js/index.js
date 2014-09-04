@@ -56,10 +56,10 @@ var app = {
 };
 
 function walanginternet() {
-    jQuery('#message').removeClass('hide');
-    jQuery('#main_message').text("No Internet Connection!");
-    jQuery('#sub_message').text("Tap to Retry");
+    $('#message').removeClass('hide');
+    $('#main_message').text("No Internet Connection!");
+    $('#sub_message').text("Tap to Retry");
 }
-jQuery('#message').click(function() {
+$('#message').click(function() {
     alert('Retry');
 });
