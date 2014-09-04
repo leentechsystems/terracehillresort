@@ -41,7 +41,7 @@ function onOffline() {
 }
 
 function onOnline() {
-    $("#message").removeClass('hide');
+    $("#loader").removeClass('hide');
      setTimeout(function(){
             window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
      }, 3000);
