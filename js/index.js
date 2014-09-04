@@ -30,17 +30,18 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     document.addEventListener("offline", onOffline, false);
     document.addEventListener("online", onOnline, false);
-
 }
 
 function onOffline() {
     // alert('No Internet Connection!');
+    $("body").addClass('reload');
     $("#message").removeClass('hide');
     $("#main_message").text('No Internet Connection');
     $("#sub_message").text('Tap to Retry');
 }
 
 function onOnline() {
+    $("#message").removeClass('hide');
      setTimeout(function(){
             window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
      }, 3000);
@@ -48,7 +49,7 @@ function onOnline() {
 
 
 $(document).ready(function() {
-    $('#message').click(function() {
+    $('body.reload').click(function() {
         location.reload();
     });
 });
