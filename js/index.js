@@ -24,11 +24,11 @@
 // it will call the event `deviceready`.
 //
 document.addEventListener("deviceready", onDeviceReady, false);
-
+document.addEventListener("offline", onOffline, false);
 // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 //
 function onDeviceReady() {
-    document.addEventListener("offline", onOffline, false);
+    //document.addEventListener("offline", onOffline, false);
     document.addEventListener("online", onOnline, false);
 }
 
