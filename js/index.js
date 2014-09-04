@@ -16,49 +16,39 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener("offline", this.onOffline, false);
-        document.addEventListener("online", this.onOnline, false);
-    },
 
-    onDeviceReady: function() {
-       // window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
-    },
-    onOffline: function() {
-        walanginternet();
-    },
-    onOnline: function() {
-         setTimeout(function(){
-            window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
-        }, 3000);
-    },
-    onResume: function() {
-        walanginternet();
-    },
+// Call onDeviceReady when PhoneGap is loaded.
+//
+// At this point, the document has loaded but phonegap-1.0.0.js has not.
+// When PhoneGap is loaded and talking with the native device,
+// it will call the event `deviceready`.
+//
+document.addEventListener("deviceready", onDeviceReady, false);
 
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+//
+function onDeviceReady() {
+    document.addEventListener("offline", onOffline, false);
+    document.addEventListener("online", onOnline, false);
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+}
 
-        console.log('Received Event: ' + id);
-    }
-};
-function walanginternet() {
+function onOffline() {
     alert('No Internet Connection!');
     $("#message").removeClass('hide');
     $("#main_message").text('No Internet Connection');
     $("#sub_message").text('Tap to Retry');
 }
+
+function onOnline() {
+     setTimeout(function(){
+            window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
+     }, 3000);
+}
+
+
+$(document).ready(function() {
+    $('#message').click(function() {
+        alert('Retry');
+    });
+});
