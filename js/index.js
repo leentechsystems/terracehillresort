@@ -34,7 +34,7 @@ function onDeviceReady() {
 }
 
 function onOffline() {
-    alert('No Internet Connection!');
+    // alert('No Internet Connection!');
     $("#message").removeClass('hide');
     $("#main_message").text('No Internet Connection');
     $("#sub_message").text('Tap to Retry');
