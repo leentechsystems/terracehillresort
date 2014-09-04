@@ -49,6 +49,6 @@ function onOnline() {
 
 $(document).ready(function() {
     $('#message').click(function() {
-        alert('Retry');
+        location.reload();
     });
 });
