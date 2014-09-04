@@ -56,5 +56,9 @@ var app = {
 };
 
 function walanginternet() {
-    alert('No Connection!');
+    jQuery('#message h4').text("No Internet Connection!");
+    jQuery('#message p').text("Tap to Retry");
 }
+jQuery('#message').click(function() {
+    alert('Retry');
+});
