@@ -26,14 +26,12 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener("resume", onResume, false);
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("offline", this.onOffline, false);
+        document.addEventListener("online", this.onOnline, false);
     },
 
     onDeviceReady: function() {
        // window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
-        document.addEventListener("offline", this.onOffline, false);
-        document.addEventListener("online", this.onOnline, false);
     },
     onOffline: function() {
         walanginternet();
