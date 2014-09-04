@@ -33,28 +33,13 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        navigator.network.isReachable("philmedix.com", reachableCallback, {});
-
-    },
-    reachableCallback: function(reachability) {
-        // There is no consistency on the format of reachability
-        var networkState = reachability.code || reachability;
-
-        var states = {};
-        states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
-        states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
-        states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
-
-        if(states[networkState] == 'No network connection') {
-            alert('No network connection');
-        }
-        else {
+        var networkState = navigator.network.connection.type;
+        if (networkState == 'NONE') {
+            alert('No Internet Connection');
+        } else {
             window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
         }
-
     },
-
-
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
