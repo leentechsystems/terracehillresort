@@ -34,7 +34,10 @@ var app = {
        // window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
     },
     onOffline: function() {
-        walanginternet();
+        alert('No Internet Connection!');
+        $('#message').removeClass('hide');
+        $('#main_message').text("No Internet Connection!");
+        $('#sub_message').text("Tap to Retry");
     },
     onOnline: function() {
          window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
@@ -55,11 +58,3 @@ var app = {
     }
 };
 
-function walanginternet() {
-    $('#message').removeClass('hide');
-    $('#main_message').text("No Internet Connection!");
-    $('#sub_message').text("Tap to Retry");
-}
-$('#message').click(function() {
-    alert('Retry');
-});
