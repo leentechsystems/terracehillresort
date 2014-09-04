@@ -28,26 +28,15 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("offline", onOffline, false);
+
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        var isOffline = 'onLine' in navigator && !navigator.onLine;
-
-        if ( isOffline ) {
-            alert('Offline');
-        }
-        else {
-            alert('Online');
-        }
+        //window.location = 'http://www.philmedix.com/walkthrough/start.php?mobile=1';
     },
-    onOffline: function() {
-        alert('No Internet Connection');
-    },
-
-
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -60,3 +49,8 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+
+function onOffline() {
+    alert('No Internet Connection');
+}
