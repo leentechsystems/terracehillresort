@@ -44,9 +44,7 @@ var app = {
     onResume: function() {
         walanginternet();
     },
-    walanginternet: function () {
-        alert('No Connection!');
-    },
+
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -58,3 +56,7 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function walanginternet() {
+    alert('No Connection!');
+}
