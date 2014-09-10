@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.philmedix" version="1" versionCode = "1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.philweddings" version="1" versionCode = "1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Philweddings</name>
     <description>
         Philweddings official mobile application
     </description>
-    <author email="admin@philmedix.com" href="http://philmedix.com/">
+    <author email="admin@philweddings.com" href="http://philweddings.com/">
         admin@philweddings.com
     </author>
 
