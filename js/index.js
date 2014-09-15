@@ -50,7 +50,10 @@ function onOnline() {
 
 
 $(document).ready(function() {
+    onOffline();
+
     $('body.reload').click(function() {
         location.reload();
     });
+
 });
