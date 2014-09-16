@@ -45,7 +45,7 @@ function onOnline() {
     $("#loader").removeClass('hide');
     $("#message").addClass('hide');
      setTimeout(function(){
-            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_self', 'location=no');
+            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_blank', 'location=yes');
             ref.addEventListener('loaderror', function(event) { location.reload(); });
      }, 3000);
 }
