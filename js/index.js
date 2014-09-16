@@ -44,13 +44,23 @@ function onOnline() {
     $("#loader").removeClass('hide');
     $("#message").addClass('hide');
      setTimeout(function(){
-            window.location = 'http://www.philweddings.com/walkthrough/start.php?mobile=1';
+        /*Using ajax*/
+        $.ajax({
+          dataType:'html',
+          url:'http://www.philweddings.com/walkthrough/start.php?mobile=1',
+          success:function(data) {
+            $('#mainscreen').html($(data).children());
+          },
+          error: function() {
+            alert('Oops! Walang Internet!');
+          }
+        });
+        //window.location = 'http://www.philweddings.com/walkthrough/start.php?mobile=1';
      }, 3000);
 }
 
 
 $(document).ready(function() {
-    onOffline();
 
     $('body.reload').click(function() {
         location.reload();
