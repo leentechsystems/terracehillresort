@@ -41,11 +41,12 @@ function onOffline() {
 }
 
 function onOnline() {
+    $("body").removeClass('reload');
     $("#loader").removeClass('hide');
     $("#message").addClass('hide');
      setTimeout(function(){
-            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_blank', 'location=no');
-            ref.addEventListener('loaderror', function(event) { alert('Connection Lost!'); });
+            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_system', 'location=no');
+            ref.addEventListener('loaderror', function(event) { location.reload(); });
      }, 3000);
 }
 
