@@ -35,27 +35,29 @@ function onDeviceReady() {
 function onOffline() {
     // alert('No Internet Connection!');
     $("body").addClass('reload');
+    $("#loader").addClass('hide');
     $("#message").removeClass('hide');
     $("#main_message").text('No Internet Connection');
     $("#sub_message").text('Tap to Retry');
+    $("#main_message").removeClass('hide');
+    $("#sub_message").removeClass('hide');
 }
 
 function onOnline() {
     $("body").removeClass('reload');
     $("#loader").removeClass('hide');
     $("#message").addClass('hide');
+    $("#main_message").addClass('hide');
+    $("#sub_message").addClass('hide');
      setTimeout(function(){
-            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_blank', 'location=yes');
+            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { location.reload(); });
      }, 3000);
 }
 
 
 $(document).ready(function() {
-    onOffline();
-
     $('body.reload').click(function() {
         location.reload();
     });
-
 });
