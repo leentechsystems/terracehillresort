@@ -59,5 +59,6 @@ function onOnline() {
 $(document).ready(function() {
     $('body.reload').click(function() {
         location.reload();
+        alert('Reload');
     });
 });
