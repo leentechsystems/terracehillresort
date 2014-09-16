@@ -43,6 +43,9 @@ function onOffline() {
 function onOnline() {
     $("#loader").removeClass('hide');
     $("#message").addClass('hide');
+    $("#loadscreen").addClass('hide');
+    $("#mainscreen").removeClass('hide');
+    $('body').removeClass('reload');
      setTimeout(function(){
         /*Using ajax*/
         $.ajax({
