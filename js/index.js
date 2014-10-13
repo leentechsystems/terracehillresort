@@ -50,7 +50,7 @@ function onOnline() {
     $("#main_message").addClass('hide');
     $("#sub_message").addClass('hide');
      setTimeout(function(){
-            var ref = window.open('http://www.philweddings.com/walkthrough/start.php?mobile=1', '_blank', 'location=no');
+            var ref = window.open('http://173.209.53.234/~photobook/', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
      }, 3000);
 }
