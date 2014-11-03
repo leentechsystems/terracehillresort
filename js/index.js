@@ -50,7 +50,7 @@ function onOnline() {
     $("#main_message").addClass('hide');
     $("#sub_message").addClass('hide');
      setTimeout(function(){
-            var ref = window.open('http://173.209.53.234/~photobook/', '_blank', 'location=no');
+            var ref = window.open('http://www.wufoo.com/html5/attributes/07-accept.html', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
      }, 3000);
 }
