@@ -3,7 +3,7 @@ body, html {
     padding: 0;
 }
 .background {
-    background: none repeat scroll 0 0 #333;
+    background: url("../img/background.png") no-repeat scroll 50% 100% / contain #f8eef7;
     height: 100%;
     left: 0;
     position: absolute;
@@ -22,25 +22,25 @@ body, html {
 }
 .cloud_container img {
     /*    left: 0;*/
+
     max-width: 100%;
     position: absolute;
 }
-
 .cloud_container img.logo {
     display: inline-block;
     margin-top: 50px;
     max-width: 400px;
     position: relative;
-    width: 80%;
+    width: 70%;
     z-index: 2;
 }
 .footer {
     bottom: 0;
     color: #d6a8b5;
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
     font-size: 15pt;
     font-weight: lighter;
-    position: absolute;
+    position: absolute !important;
     width: 100%;
 }
 .footer h3 {
@@ -54,14 +54,14 @@ body, html {
     display: none;
 }
 #main_message {
-    color: #fff;
-    font-family: Roboto,sans-serif;
+    color: #555555;
+    font-family: Roboto, sans-serif;
     font-size: 30pt;
     font-weight: normal;
     margin: 10px 15px 15px;
 }
 #sub_message {
-    color: #fff;
+    color: #555555;
     font-family: Roboto, sans-serif;
     font-size: 18pt;
 }
@@ -80,6 +80,7 @@ body, html {
     -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
     animation: bouncedelay 1.2s infinite ease-in-out;
     /* Prevent first frame from flickering when animation starts */
+
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
