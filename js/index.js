@@ -58,7 +58,7 @@ function onOnline() {
 }
 
 function load_url(url) {
-    var base_domain = url.substr(0, 27);
+    var base_domain = url.substr(0, 26);
     if(base_domain != 'http://m.meiceljewelry.com') {
         var external = window.open(url, '_system', 'location=no');
     }
