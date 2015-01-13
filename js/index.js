@@ -53,6 +53,7 @@ function onOnline() {
      setTimeout(function(){
             var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
+            ref.addEventListener('loadstart', function(event) { alert(event.url); });
      }, 3000);
 }
 
