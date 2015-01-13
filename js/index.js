@@ -25,6 +25,7 @@
 //
 document.addEventListener("deviceready", onDeviceReady, false);
 document.addEventListener("offline", onOffline, false);
+document.addEventListener("backbutton", onBackKeyDown, false);
 // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 //
 function onDeviceReady() {
@@ -53,7 +54,7 @@ function onOnline() {
      setTimeout(function(){
             var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
-            ref.addEventListener('loadstart', function(event) { load_url(event.url); });
+            ref.addEventListener('loadstart', function(event) { var external = load_url(event.url); if(external == 1) { ref.history.back() } });
      }, 3000);
 }
 
@@ -61,11 +62,13 @@ function load_url(url) {
     var base_domain = url.substr(0, 26);
     if(base_domain != 'http://m.meiceljewelry.com') {
         var external = window.open(url, '_system', 'location=no');
+        return '1';
     }
+    return '0';
 }
 $(document).ready(function() {
     $('body.reload').click(function() {
         location.reload();
-        alert('Reload');
+
     });
 });
