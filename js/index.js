@@ -54,7 +54,7 @@ function onOnline() {
      setTimeout(function(){
             var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
-            ref.addEventListener('loadstart', function(event) { var external = load_url(event.url); if(external === true ) { return false; } });
+            ref.addEventListener('loadstart', function(event) { var external = load_url(event.url); if(external === true ) { event.preventDefault ? event.preventDefault() : event.returnValue = false; } });
      }, 3000);
 }
 
