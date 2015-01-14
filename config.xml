@@ -56,5 +56,8 @@
         <param name="android-package" value="org.apache.cordova.NetworkManager" />
     </feature>
 
+    <access origin="http://127.0.0.1*"/>
+    <access origin="http://meiceljewelry.com" subdomains="true" />
+
 
 </widget>
