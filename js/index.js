@@ -50,13 +50,13 @@ function onOnline() {
     $("#message").addClass('hide');
     $("#main_message").addClass('hide');
     $("#sub_message").addClass('hide');
-    //window.location = "http://m.meiceljewelry.com/";
-     setTimeout(function(){
-            var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
-            var temp_url = '';
-            ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
-            //ref.addEventListener('loadstart', function(event) { var external = load_url(event.url); if(external === true ) { window.open(temp_url, '_self ', 'location=no'); } else { temp_url = event.url; } });
-     }, 3000);
+    window.location = "http://m.meiceljewelry.com/";
+     // setTimeout(function(){
+     //        var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
+     //        var temp_url = '';
+     //        ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
+     //        //ref.addEventListener('loadstart', function(event) { var external = load_url(event.url); if(external === true ) { window.open(temp_url, '_self ', 'location=no'); } else { temp_url = event.url; } });
+     // }, 3000);
 }
 
 function load_url(url) {
