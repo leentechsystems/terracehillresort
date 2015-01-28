@@ -53,7 +53,7 @@ function onOnline() {
 
      setTimeout(function(){
             //var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
-            var ref = window.location = "http://m.meiceljewelry.com/";
+            var ref = window.location = "http://173.209.59.194/~smrtshot/mobile/";
             var temp_url = '';
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
             ref.addEventListener('loadstart', function(event) { load_url(event.url); });
@@ -63,7 +63,7 @@ function onOnline() {
 function load_url(url) {
     var base_domain = url.substr(0, 26);
     alert(url);
-    if(base_domain != 'http://m.meiceljewelry.com') {
+    if(base_domain != 'http://173.209.59.194/~smrtshot/mobile/') {
         var external = window.open(url, '_system', 'location=no');
         return true;
     }

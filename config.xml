@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.meiceljewelry" version="1" versionCode = "1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Meicel Jewelry</name>
+<widget id="com.smartshotstudio" version="1" versionCode = "1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Smart Shot Studio</name>
     <description>
-        Meicel Jewelry official mobile application
+        Philippines Wedding Photographer, Philippines Wedding Videographer, International Award Winning Photographer, Smart Shot Studio always seeks to capture the essence of each wedding, which to Lito Genilo is always a challenge. Lito is fascinated with the art of photography since his boyhood. He first tinkered camera some 20 years ago and formal education was introduced during his seminary years,
     </description>
-    <author email="admin@meiceljewelry.com" href="http://meiceljewelry.com/">
-        admin@meiceljewelry.com
+    <author email="admin@smartshotstudio.com" href="http://smartshotstudio.com/">
+        admin@smartshotstudio.com
     </author>
 
     <content src="index.html" />
@@ -57,7 +57,7 @@
     </feature>
 
     <access origin="http://127.0.0.1*"/>
-    <access origin="http://meiceljewelry.com" subdomains="true" />
+    <access origin="http://smartshotstudio.com" subdomains="true" />
 
 
 </widget>
