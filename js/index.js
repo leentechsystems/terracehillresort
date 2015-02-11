@@ -63,7 +63,7 @@ function onOnline() {
 function load_url(url) {
     var base_domain = url.substr(0, 26);
     alert(url);
-    if(base_domain != 'http://terracehillresort.com/') {
+    if(base_domain != 'http://terracehillresort.com/index.php') {
         var external = window.open(url, '_system', 'location=no');
         return true;
     }
