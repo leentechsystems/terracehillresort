@@ -58,7 +58,7 @@ cavite resort, wedding cafe in tagaytay, tagaytay wedding cafe, tagaytay wedding
     </feature>
 
     <access origin="http://127.0.0.1*"/>
-    <access origin="http://smartshotstudio.com" subdomains="true" />
+    <access origin="http://terracehillresort.com" subdomains="true" />
 
 
 </widget>
