@@ -1,15 +1,9 @@
 body, html {
     margin: 0;
     padding: 0;
+    background: url('../img/background1.png');
 }
 .background {
-    background: url('../img/background1.png');
-    background-size:  contain;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
 }
 .container {
     height: 100%;
@@ -18,22 +12,11 @@ body, html {
     overflow: hidden;
     text-align: center;
 }
-.cloud_container {
-    position: relative;
-}
-.cloud_container img {
-    /*    left: 0;*/
-
-    max-width: 100%;
+.logo {
+    top: 10%;
     position: absolute;
-}
-.cloud_container img.logo {
-    display: inline-block;
-    margin-top: 50px;
-    max-width: 400px;
-    position: relative;
-    width: 70%;
-    z-index: 2;
+    text-align: center;
+    width: 100%;
 }
 .footer {
     bottom: 0;
@@ -45,46 +28,12 @@ body, html {
     width: 100%;
 }
 .footer h3 {
-    font-weight: normal;
+    color: #343434;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Montserrat",sans-serif;
 }
-.container > div {
-    position: relative;
-    z-index: 5;
-}
-.hide {
-    display: none;
-}
-#main_message {
-    color: #555555;
-    font-family: Roboto, sans-serif;
-    font-size: 30pt;
-    font-weight: normal;
-    margin: 10px 15px 15px;
-}
-#sub_message {
-    color: #555555;
-    font-family: Roboto, sans-serif;
-    font-size: 18pt;
-}
-.spinner {
-    height: 30px;
-    margin: 100px auto 0;
-    position: relative;
-    width: 30px;
-}
-.container1 > div, .container2 > div, .container3 > div {
-    width: 6px;
-    height: 6px;
-    background-color: #000;
-    border-radius: 100%;
-    position: absolute;
-    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
-    animation: bouncedelay 1.2s infinite ease-in-out;
-    /* Prevent first frame from flickering when animation starts */
 
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
 .spinner .spinner-container {
     position: absolute;
     width: 100%;
