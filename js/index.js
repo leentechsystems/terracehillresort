@@ -53,7 +53,7 @@ function onOnline() {
 
      setTimeout(function(){
             //var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
-            var ref = window.location = "http://173.209.59.194/~smrtshot/mobile/";
+            var ref = window.location = "http://terracehillresort.com/";
             var temp_url = '';
             ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
             ref.addEventListener('loadstart', function(event) { load_url(event.url); });
