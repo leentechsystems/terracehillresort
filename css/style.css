@@ -1,9 +1,16 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: url('../img/background1.png');
+    background: url('../img/swimming.jpg');
+    background-position: center center !important;
+    background-size: cover !important;
 }
-.background {
+.overlay {
+    background: #000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
 }
 .container {
     height: 100%;
@@ -12,7 +19,7 @@ body, html {
     text-align: center;
 }
 .logo {
-    top: 10%;
+    top: 30%;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -21,13 +28,13 @@ body, html {
     bottom: 0;
     color: #d6a8b5;
     font-family: Arial,sans-serif;
-    font-size: 15pt;
+    font-size: 22pt;
     font-weight: lighter;
     position: absolute !important;
     width: 100%;
 }
 .footer h3 {
-    color: #343434;
+    color: #FFF;
     text-transform: uppercase;
     font-family: "Montserrat",sans-serif;
 }
