@@ -24,19 +24,26 @@ body, html {
     text-align: center;
     width: 100%;
 }
+
+.logo img {
+   max-width: 50%;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
 .footer {
     bottom: 0;
     color: #d6a8b5;
     font-family: Arial,sans-serif;
-    font-size: 22pt;
-    font-weight: lighter;
+    font-size: 22px;
+    font-weight: normal;
     position: absolute !important;
     width: 100%;
 }
 .footer h3 {
     color: #FFF;
-    text-transform: uppercase;
     font-family: "Montserrat",sans-serif;
+    font-weight: normal;
 }
 
 .spinner .spinner-container {
